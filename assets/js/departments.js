@@ -22,17 +22,17 @@
   });
 
   // Mobile?
-  // if (browser.mobile) {
-  //   $body.addClass("is-mobile");
-  // } else {
-  //   breakpoints.on(">medium", function () {
-  //     $body.removeClass("is-mobile");
-  //   });
+  if (browser.mobile) {
+    $body.addClass("is-mobile");
+  } else {
+    breakpoints.on(">medium", function () {
+      $body.removeClass("is-mobile");
+    });
 
-  //   breakpoints.on("<=medium", function () {
-  //     $body.addClass("is-mobile");
-  //   });
-  // }
+    breakpoints.on("<=medium", function () {
+      $body.addClass("is-mobile");
+    });
+  }
 
   // Scrolly.
   $(".scrolly").scrolly({
@@ -56,22 +56,22 @@
     });
 
   // Header.
-  // if ($banner.length > 0 && $header.hasClass("alt")) {
-  //   $window.on("resize", function () {
-  //     $window.trigger("scroll");
-  //   });
+  if ($banner.length > 0 && $header.hasClass("alt")) {
+    $window.on("resize", function () {
+      $window.trigger("scroll");
+    });
 
-  //   $banner.scrollex({
-  //     bottom: $header.outerHeight() + 1,
-  //     terminate: function () {
-  //       $header.removeClass("alt");
-  //     },
-  //     enter: function () {
-  //       $header.addClass("alt");
-  //     },
-  //     leave: function () {
-  //       $header.removeClass("alt");
-  //     },
-  //   });
-  // }
+    $banner.scrollex({
+      bottom: $header.outerHeight() + 1,
+      terminate: function () {
+        $header.removeClass("alt");
+      },
+      enter: function () {
+        $header.addClass("alt");
+      },
+      leave: function () {
+        $header.removeClass("alt");
+      },
+    });
+  }
 })(jQuery);
