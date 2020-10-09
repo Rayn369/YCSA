@@ -3,55 +3,27 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="ycsa,york university,YORK CHINESE STUDENT ASSOCIATION，加拿大约克大学，学生会，约克大学学生会，留学，加拿大，多伦多，留学生活，合作，赞助，联系方式，contact"
+    />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link rel="stylesheet" href="assets/css/contact.css" />
     <title>Contact Us</title>
   </head>
   <body>
-    <div class="imgBx">
-      <img src="images/contactBg.jpg" alt="" />
+    <div class="imgBox" data-aos="fade-in">
+      <img src="./images/contact.jpeg" alt="" />
     </div>
-    <section id="contact">
-      <div class="wrapper">
-        <div class="company-info" data-aos="slide-right">
-          <div>
-            <h3>YCSA</h3>
-            <ul>
-              <li><i class="fa fa-road"></i> 44 Something st</li>
-              <li><i class="fa fa-phone"></i> (555) 555-5555</li>
-              <li><i class="fa fa-envelope"></i> test@acme.test</li>
-            </ul>
-          </div>
-        </div>
 
-        <div class="contact-form" data-aos="slide-left">
-          <h3>Email us</h3>
-          <form action="">
-            <p>
-              <label for="">Name</label>
-              <input type="text" name="name" />
-            </p>
-            <p>
-              <label for="">Company</label>
-              <input type="text" name="company" />
-            </p>
-            <p>
-              <label for="">Email Address</label>
-              <input type="text" name="email" />
-            </p>
-            <p>
-              <label for="">Phoen number</label>
-              <input type="text" name="phone" />
-            </p>
-            <p class="full">
-              <label for="">Message</label>
-              <textarea name="message" rows="5"></textarea>
-            </p>
-            <p class="full">
-              <button>Submit</button>
-            </p>
-          </form>
-        </div>
-      </div>
-    </section>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <!-- Initilize AOS -->
+    <script>
+      AOS.init({
+        offset: 200,
+        duration: 1000,
+        delay: 300,
+      });
+    </script>
   </body>
 </html>

@@ -30,13 +30,13 @@
     let settings = {
       // Images (in the format of 'url': 'alignment').
       images: {
-        "images/homePage01.jpg": "center",
-        "images/homePage02.jpeg": "center",
-        "images/homePage03.jpg": "center",
+        "images/event01.png": "center",
+        "images/event02.jpeg": "center",
+        "images/event03.jpeg": "center",
       },
 
       // Delay.
-      delay: 6000,
+      delay: 9000,
     };
 
     // Variables

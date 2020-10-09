@@ -130,7 +130,7 @@ h6 {
 
 strong,
 b {
-  color: #fff;
+  color: #000;
   font-weight: 800;
 }
 
@@ -254,12 +254,11 @@ body.is-preload .logo {
 }
 #header ul li {
   /* height: 350px; */
+  max-width: 700px;
   height: 100%;
   list-style: none;
   background: #fff;
   display: flex;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 2rem;
   opacity: 0.8;
 }
@@ -279,6 +278,7 @@ body.is-preload .logo {
 
 #header ul li .detailBox {
   padding: 1rem;
+  text-align: center;
 }
 #header ul li .detailBox a {
   display: inline-block;
@@ -306,6 +306,7 @@ body.is-preload .logo {
     font-size: 10px;
   }
 }
+
 /* Footer */
 #footer {
   z-index: 10;

@@ -50,7 +50,7 @@ select,
 textarea {
   color: #fff;
   font-family: "Open Sans", Helvetica, sans-serif;
-  font-size: 15pt;
+  font-size: 14pt;
   font-weight: 400;
   letter-spacing: 0.075em;
   line-height: 1.65em;
@@ -158,11 +158,7 @@ h6 {
   line-height: 1.5em;
 }
 
-#landingPage {
-  width: 100%;
-  height: 100%;
-}
-.showcase {
+#showcase {
   position: relative;
   width: 100%;
   height: 100vh;
@@ -171,14 +167,27 @@ h6 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  overflow: hidden;
-  background: url(../../images/aboutBg1.jpg) no-repeat center center/cover;
-
-  background-attachment: fixed;
 }
 
+.video-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.video-container video {
+  min-width: 100%;
+  min-height: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  object-fit: cover;
+}
 /* Overlay */
-.showcase:after {
+#showcase:after {
   position: absolute;
   content: "";
   top: 0;
@@ -246,14 +255,22 @@ nav ul li a:hover {
   background-color: #f00;
   color: #fff;
 }
-
 .bannerText {
+  display: none;
+  text-align: center;
+  padding: 1rem;
+}
+#text {
   position: relative;
   text-align: center;
-  margin: 0 8rem;
+  margin: 8rem;
   z-index: 10;
 }
-.bannerText p {
+#text h2 {
+  color: #000;
+}
+#text p {
+  color: #000;
   padding-top: 1rem;
 }
 
@@ -292,7 +309,7 @@ nav ul li a:hover {
 /* ABOUT */
 #about {
   text-align: center;
-  padding: 5rem 0 5rem 0;
+  padding: 0 0 5rem 0;
 }
 #about .intro-header h2 {
   color: #333;
@@ -363,7 +380,8 @@ nav ul li a:hover {
   bottom: 0;
   left: 0;
   padding: 1rem;
-  background: linear-gradient(#7b4397, #dc2430);
+  background: linear-gradient(#fad0c4, #ff9a9e);
+  color: #2e3842;
 }
 #about .container .box .content h2 {
   /* font-family: "Liu Jian Mao Cao", cursive; */
@@ -622,6 +640,15 @@ strong {
 }
 
 @media (max-width: 768px) {
+  #showcase {
+    background: url(../../images/aboutBg1.jpg) no-repeat center center/cover;
+  }
+  .video-container {
+    display: none;
+  }
+  .bannerText {
+    display: block;
+  }
   nav .logo img {
     width: 60px;
     height: 60px;
@@ -643,6 +670,15 @@ strong {
   nav.black ul li a {
     line-height: 1rem;
   }
+  .more {
+    display: none;
+  }
+  #text {
+    display: none;
+  }
+  #about {
+    margin-top: 3rem;
+  }
 }
 @media (max-width: 700px) {
   #about .container .grid .box {
@@ -655,7 +691,7 @@ strong {
     margin: 0 2rem;
   }
   #about {
-    padding: 5rem 0 0 0;
+    padding: 0 0 0 0;
   }
   #about .container {
     padding: 0 1rem;
